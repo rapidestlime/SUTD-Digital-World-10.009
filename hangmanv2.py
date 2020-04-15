@@ -29,13 +29,13 @@ class MainGame(BoxLayout, sm.SM):  #maingame class
         self.wrong = SoundLoader.load('wrong_ans.mp3')     #loads the wrong sound effect
 
     def init_ui(self, dt=0):
-        global thehint                              #provides access to hint at global lvl
+        global thehint                              #provides access to thehint variable at global lvl
         hint = self.ids.hints
         hint.text = thehint
 
     def get_next_values(self, state, inp):
-        global answer                              #provides acess to thehint, correct, wrong , answer variables at
-        global thehint                             #global lvl
+        global answer                              #provides access to thehint, answer variables at global level
+        global thehint                             
         image = self.ids.status
         if state == 0:
             if inp == answer:
@@ -88,7 +88,7 @@ class MainGame(BoxLayout, sm.SM):  #maingame class
         else:
             o = self.step(inp)
             print(o)
-            self.parent.parent.current = str(o)
+            self.parent.parent.current = str(o)      #tells kivy what screen to show to user
             self.ids.guess.text = ''
             print(self.state)
             print('\n')
