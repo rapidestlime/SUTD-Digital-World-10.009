@@ -1,0 +1,132 @@
+<MainWindow>:
+    id: main_win
+
+    ScreenManager:
+        id: scrn_mngr_main
+
+        Screen:
+            id: scrn_game
+            name: 'scrn_game'
+
+        Screen:
+            id: scrn_win
+            name: 'scrn_win'
+
+
+        Screen:
+            id: scrn_lose
+            name: 'scrn_lose'
+
+
+<MainGame>:
+    id: main_win
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            id : gametitle
+            text : 'HANGMANZ'
+            font_size : 30
+            bold : True
+            italic :  True
+            size_hint_y :0.1
+
+        AsyncImage:
+            id : status
+            source : 'hangman0.jpg' #takes in pictures of different states of hangman within
+            size_hint_y: 0.5
+
+        Label:
+            text : 'HINT'
+            font_size : 25
+            bold : True
+            italic: True
+            size_hint_y :0.1
+
+        Label:
+            id : hints
+            text : ''
+            font_size: 40
+            bold: True
+            italic: True
+            size_hint_y:0.1
+
+        TextInput:
+            id: guess
+            hint_text : 'Your Guess'
+            multiline : False
+            valign:  True
+            font_size : 30
+            halign : "center"
+            size_hint_y:0.1
+            on_text_validate :root.validate()
+
+        Button:
+            id: check_ans
+            text: 'CHECK'
+            font_size: 20
+            bold: True
+            on_release : root.validate()
+            size_hint_y:0.1
+
+<YouLose>:
+    id: main_win
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'YOU LOSE!'
+            font_size : 30
+            bold: True
+
+        BoxLayout:
+            orientation : 'horizontal'
+
+            Button:
+                id: restart
+                text: 'RESTART'
+                font_size : 30
+                bold: True
+                on_release: root.parent.parent.current = 'scrn_game'
+                size_hint_x: 0.5
+
+            Button:
+                id: quit
+                text: 'QUIT'
+                font_size : 30
+                bold: True
+                size_hint_x: 0.5
+                on_release: app.get_running_app().stop()
+
+
+<YouWin>:
+    id: main_win
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'YOU WIN!'
+            font_size : 30
+            bold: True
+
+        BoxLayout:
+            orientation : 'horizontal'
+
+            Button:
+                id: restart
+                text: 'RESTART'
+                font_size : 30
+                bold: True
+                on_release: root.parent.parent.current = 'scrn_game'
+                size_hint_x: 0.5
+
+            Button:
+                id: quit
+                text: 'QUIT'
+                font_size : 30
+                bold: True
+                on_release: app.get_running_app().stop()
+                size_hint_x: 0.5
