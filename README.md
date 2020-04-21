@@ -67,7 +67,7 @@ Builder.load_file('MainApp.kv')    #loads the kv file for usage
 Line 23 to 94: 
 This part will create the MainGame class.  
 In here, the initialization part, which inherits from BoxLayout and sm.SM, will include the start state which is set to initial state 0, 
-loading the required sound effects for wrong and correct guesses, as well as setting callbacks to the function init_ui for the game to constantly reflect the correct hint to be reflected to the user. 
+loading the required sound effects for wrong and correct guesses, as well as setting callbacks to the function init_ui for the game to constantly reflect the correct hint to be reflected to the user.                                                                          
 The get_next_values function inherited from the sm.SM class will help the game transit into different transitions like changing the different states of the hangman and providing the sound effects as players input guesses, and checks with the answer that is located at a global level. If the answer is correct, it will reset the hint and answer at the global level.                                          
 The validate function will be activated when player presses the check button in the game. If there is no input in the textbox, nothing will happen as we cannot have a NoneType input into the step function which will in turn call the get_next_values as this will produce error. If there is input, it will be eventually translated into the get_next_values function through the step function and the output will be current screen that the game is suppose to show depending on what the state machine generates. After every guess, it automatically blanks out the textbox so players can key in guesses at a blank state. 
 
