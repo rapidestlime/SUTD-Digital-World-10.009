@@ -26,4 +26,8 @@ P.S. : Do turn on your computer's speakers as there will sound effects in the ga
  
 ## Overview of Game 
 
-This is simple GUI Kivy-based game with state machine(libdw's SM class) integrated into it that is based on the classical game, hangman. In here, users will have to guess a word based on the hint displayed within the game with three tries and will either be brought to a  feedback screen that tells them that they either lose or win accompanied with sound effects. In each try, the screen will reflect different changes to the hangman progressively, with the start of a single bar followed by the head and the body with each being tagged to a state in the state machine in the code.
+This is simple GUI Kivy-based game with state machine(libdw's SM class) integrated into it that is based on the classical game, hangman. In here, users will have to guess a word based on the hint displayed within the game with three tries and will either be brought to a  feedback screen that tells them that they either lose or win accompanied with sound effects. In each try, the screen will reflect different changes to the hangman progressively, with the start of a single bar followed by the head and the body with each being tagged to a state in the state machine in the code. 
+ 
+## Explanation of code 
+ 
+1. kv file : The .kv file acts as a 'CSS' like template for the Kivy App Instance to build upon where you can easily organize 
