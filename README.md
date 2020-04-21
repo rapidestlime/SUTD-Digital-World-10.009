@@ -46,7 +46,7 @@ from kivy.core.audio import SoundLoader
 from libdw import sm
 import random  
 ``` 
-Lines 10-16:  
+Lines 10-16:                                                                                                                              
 Provides the word bank of guesses for app to randomly generate out for player to guess. 
 
 ```python 
@@ -64,7 +64,7 @@ This line will load the .kv file for the kivy App Instance to build upon.
 ```python  
 Builder.load_file('MainApp.kv')    #loads the kv file for usage
 ```
-Line 23 to 94: 
+Line 23 to 94:                                                                                                                                   
 This part will create the MainGame class.  
 In here, the initialization part, which inherits from BoxLayout and sm.SM, will include the start state which is set to initial state 0, 
 loading the required sound effects for wrong and correct guesses, as well as setting callbacks to the function init_ui for the game to constantly reflect the correct hint to be reflected to the user.                                                                          
@@ -146,7 +146,7 @@ class MainGame(BoxLayout, sm.SM):  #maingame class
             print('\n')
 ```  
 
-Line 98 to 102: 
+Line 98 to 102:                                                                                                                           
 Creates the YouLose and YouWin class, which in turn is linked to the .kv file.  
 
 ```python
@@ -157,7 +157,7 @@ class YouWin(BoxLayout):
     pass 
 ```  
 
-Line 104 to 117: 
+Line 104 to 117:                                                                                                                          
 Creates the MainWindow class, which is linked in the to the .kv file. Linking the game screen to MainGame class, win screen to the YouWin class and lose screen to the YouLose class and adding them to the screen manager, as indicated in the .kv file for the MainWindow class through the add_widget function with the help of ids.   
  
 ```python 
@@ -177,7 +177,7 @@ class MainWindow(BoxLayout):
         print(self.ids) 
 ```
 
-Line 119 to 124:  
+Line 119 to 124:                                                                                                                          
 Creates the MainApp class and inherit the kivy's App class and instantiates the MainWindow class when .py is being run.
   
 ```python
