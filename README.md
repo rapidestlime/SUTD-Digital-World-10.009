@@ -31,7 +31,7 @@ This is simple GUI Kivy-based game with state machine(libdw's SM class) integrat
  
 ## Explanation of code 
  
-1. kv file : The .kv file acts as a 'CSS' like template for the Kivy App Instance to build upon where you can easily organize and add widgets and its attributes. In this .kv, we first create a screen manager class and its three screen classes(game window, win window and lose window) for the <Main Window> class. Then we create the <MainGame>, <YouWin>, <YouLose> classes and start filling each window up with the required layout which is BoxLayout and widgets within the BoxLayout such as AsyncImage(allows images to be changed as required), Button, TextInput and link to functions from widgets like Buttons in the .py file. It also allows easy tagging of widgets with the use of ids such that they can be easily referred to in .py file as or when is needed.
+1. kv file : The .kv file acts as a 'CSS' like template for the Kivy App Instance to build upon where you can easily organize and add widgets and its attributes. In this .kv, we first create a screen manager class and its three screen classes(game window, win window and lose window) for the MainWindow class. Then we create the MainGame, YouWin, YouLose classes and start filling each window up with the required layout which is BoxLayout and widgets within the BoxLayout such as AsyncImage(allows images to be changed as required), Button, TextInput and link to functions from widgets like Buttons in the .py file. It also allows easy tagging of widgets with the use of ids such that they can be easily referred to in .py file as or when is needed.
   
 2. The .py file will hold the 'logic' code for the game to run smoothly. This code will be explained by parts as shown below:
  
@@ -67,8 +67,8 @@ Builder.load_file('MainApp.kv')    #loads the kv file for usage
 Line 23 to 94: 
 This part will create the MainGame class.  
 In here, the initialization part, which inherits from BoxLayout and sm.SM, will include the start state which is set to initial state 0, 
-loading the required sound effects for wrong and correct guesses, as well as setting callbacks to the function init_ui for the game to constantly reflect the correct hint to be reflected to the user.  
-The get_next_values function inherited from the sm.SM class will help the game transit into different transitions like changing the different states of the hangman and providing the sound effects as players input guesses, and checks with the answer that is located at a global level. If the answer is correct, it will reset the hint and answer at the global level.
+loading the required sound effects for wrong and correct guesses, as well as setting callbacks to the function init_ui for the game to constantly reflect the correct hint to be reflected to the user. 
+The get_next_values function inherited from the sm.SM class will help the game transit into different transitions like changing the different states of the hangman and providing the sound effects as players input guesses, and checks with the answer that is located at a global level. If the answer is correct, it will reset the hint and answer at the global level.                                          
 The validate function will be activated when player presses the check button in the game. If there is no input in the textbox, nothing will happen as we cannot have a NoneType input into the step function which will in turn call the get_next_values as this will produce error. If there is input, it will be eventually translated into the get_next_values function through the step function and the output will be current screen that the game is suppose to show depending on what the state machine generates. After every guess, it automatically blanks out the textbox so players can key in guesses at a blank state. 
 
 ```python 
@@ -158,7 +158,7 @@ class YouWin(BoxLayout):
 ```  
 
 Line 104 to 117: 
-Creates the MainWindow class, which is linked in the to the .kv file. Linking the game screen to MainGame class, win screen to the YouWin class and lose screen to the YouLose class and adding them to the screen manager, as indicated in the .kv file for the <MainWindow> class through the add_widget function with the help of ids.   
+Creates the MainWindow class, which is linked in the to the .kv file. Linking the game screen to MainGame class, win screen to the YouWin class and lose screen to the YouLose class and adding them to the screen manager, as indicated in the .kv file for the MainWindow class through the add_widget function with the help of ids.   
  
 ```python 
 class MainWindow(BoxLayout): 
