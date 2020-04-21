@@ -14,12 +14,17 @@ The files are:
 6. correct.mp3 
 7. wrong.mp3  
  
-Ensure your dependencies are of the latest version: 
-kivy_deps.gstreamer  0.2.0 
-kivy_deps.angle      0.2.0 
-kivy_deps.glew       0.2.0 
-kivy_deps.sdl2       0.2.0 
-kivy                 1.11.1
+Ensure your dependencies are of the latest version:    
+
+1.kivy_deps.gstreamer  0.2.0   
+
+2.kivy_deps.angle      0.2.0  
+
+3.kivy_deps.glew       0.2.0  
+
+4.kivy_deps.sdl2       0.2.0  
+
+5.kivy                 1.11.1
 
  
 P.S. : Do turn on your computer's speakers as there will sound effects in the game :)
