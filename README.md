@@ -21,7 +21,9 @@ Ensure your dependencies are of the latest version:
 4. kivy_deps.sdl2       0.2.0  
 5. kivy                 1.11.1
  
-GITHUB LINK (To view the whole project or download the required files as one whole file): https://github.com/rapidestlime/SUTD-Digital-World-10.009
+GITHUB LINK (To view the whole project or download the required files as one whole file): https://github.com/rapidestlime/SUTD-Digital-World-10.009 
+ 
+Video explanation of game: https://web.microsoftstream.com/video/e6729e8b-27e1-4172-b7a0-03c4dcdac43e
  
 P.S. : Do turn on your computer's speakers as there will sound effects in the game :)
  
